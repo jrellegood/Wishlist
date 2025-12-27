@@ -1,0 +1,94 @@
+{
+  "gifts": [
+    {
+      "id": "gift-001",
+      "title": "Mechanical Keyboard",
+      "description": "Would love a nice mechanical keyboard for coding. Cherry MX Brown switches preferred.",
+      "category": "tech",
+      "priority": "high",
+      "priceRange": "$100-150",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/Keychron-Mechanical-Keyboard-Gateron-Hot-swappable/dp/B0875SJ8FN",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-002",
+      "title": "Cookbook - The Food Lab",
+      "description": "Heard great things about this science-based cookbook.",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$30-40",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/Food-Lab-Cooking-Through-Science/dp/0393081087",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-003",
+      "title": "Cozy Throw Blanket",
+      "description": "Soft blanket for the couch, neutral colors preferred.",
+      "category": "home",
+      "priority": "low",
+      "priceRange": "$40-60",
+      "purchased": true,
+      "links": [
+        {
+          "url": "https://www.amazon.com/Bedsure-Blanket-Blankets-Soft-Lightweight/dp/B07K6WJQLS",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-004",
+      "title": "Wireless Gaming Mouse",
+      "description": "Need a good wireless gaming mouse with programmable buttons.",
+      "category": "tech",
+      "priority": "high",
+      "priceRange": "$70-100",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/Logitech-Lightspeed-PowerPlay-Compatible-Programmable/dp/B07PHLBBQR",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-005",
+      "title": "Board Game - Wingspan",
+      "description": "Beautiful bird-themed strategy game I've wanted to try.",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$50-65",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/Stonemaier-Games-STM900-Wingspan-Board/dp/B07HJMGXHL",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-006",
+      "title": "Running Shoes",
+      "description": "Need new running shoes, size 10, prefer neutral cushioning.",
+      "category": "clothing",
+      "priority": "high",
+      "priceRange": "$120-160",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.nike.com/t/pegasus-40-mens-road-running-shoes",
+          "store": "Nike"
+        }
+      ]
+    }
+  ]
+}
