@@ -2,91 +2,576 @@
   "gifts": [
     {
       "id": "gift-001",
-      "title": "Mechanical Keyboard",
-      "description": "Would love a nice mechanical keyboard for coding. Cherry MX Brown switches preferred.",
-      "category": "tech",
-      "priority": "high",
-      "priceRange": "$100-150",
+      "title": "Infomocracy: Book One of the Centenal Cycle",
+      "description": "By Malka Older - Apple Books / Kindle",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$10",
       "purchased": false,
       "links": [
         {
-          "url": "https://www.amazon.com/Keychron-Mechanical-Keyboard-Gateron-Hot-swappable/dp/B0875SJ8FN",
+          "url": "https://www.amazon.com/dp/B0151U75ME/?coliid=I1WIR1V432KTO&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
           "store": "Amazon"
         }
       ]
     },
     {
       "id": "gift-002",
-      "title": "Cookbook - The Food Lab",
-      "description": "Heard great things about this science-based cookbook.",
+      "title": "Power and Prediction: The Disruptive Economics of Artificial Intelligence",
+      "description": "By Ajay Agrawal, Joshua Gans - Apple Books / Kindle",
       "category": "books",
       "priority": "medium",
-      "priceRange": "$30-40",
+      "priceRange": "$15",
       "purchased": false,
       "links": [
         {
-          "url": "https://www.amazon.com/Food-Lab-Cooking-Through-Science/dp/0393081087",
+          "url": "https://www.amazon.com/dp/B09Q6GT9JN/?coliid=I22KDWS7T7DEZS&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
           "store": "Amazon"
         }
       ]
     },
     {
       "id": "gift-003",
-      "title": "Cozy Throw Blanket",
-      "description": "Soft blanket for the couch, neutral colors preferred.",
-      "category": "home",
-      "priority": "low",
-      "priceRange": "$40-60",
-      "purchased": true,
+      "title": "The Ascent of Money: A Financial History of the World: 10th Anniversary Edition",
+      "description": "By Niall Ferguson - Apple Books / Kindle",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$15",
+      "purchased": false,
       "links": [
         {
-          "url": "https://www.amazon.com/Bedsure-Blanket-Blankets-Soft-Lightweight/dp/B07K6WJQLS",
+          "url": "https://www.amazon.com/dp/B0018QQQKS/?coliid=I2XFKBVIQZN7BQ&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
           "store": "Amazon"
         }
       ]
     },
     {
       "id": "gift-004",
-      "title": "Wireless Gaming Mouse",
-      "description": "Need a good wireless gaming mouse with programmable buttons.",
-      "category": "tech",
-      "priority": "high",
-      "priceRange": "$70-100",
+      "title": "Wool: Book One of the Silo Series",
+      "description": "By Hugh Howey - Apple Books / Kindle",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$13",
       "purchased": false,
       "links": [
         {
-          "url": "https://www.amazon.com/Logitech-Lightspeed-PowerPlay-Compatible-Programmable/dp/B07PHLBBQR",
+          "url": "https://www.amazon.com/dp/B088SY4GSD/?coliid=I4Q85WXQAY0ZW&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
           "store": "Amazon"
         }
       ]
     },
     {
       "id": "gift-005",
-      "title": "Board Game - Wingspan",
-      "description": "Beautiful bird-themed strategy game I've wanted to try.",
+      "title": "Smug Owl",
+      "description": "By Runaway Parade Games - Board Game / RPG",
       "category": "games",
       "priority": "medium",
-      "priceRange": "$50-65",
+      "priceRange": "$22",
       "purchased": false,
       "links": [
         {
-          "url": "https://www.amazon.com/Stonemaier-Games-STM900-Wingspan-Board/dp/B07HJMGXHL",
+          "url": "https://www.amazon.com/dp/B0CCSW1H5C/?coliid=I9PRUVCB037A9&colid=30A9K7BG0C651&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it",
           "store": "Amazon"
         }
       ]
     },
     {
       "id": "gift-006",
-      "title": "Running Shoes",
-      "description": "Need new running shoes, size 10, prefer neutral cushioning.",
-      "category": "clothing",
-      "priority": "high",
-      "priceRange": "$120-160",
+      "title": "The Art of Game Design: A Book of Lenses, Third Edition",
+      "description": "By Jesse Schell - Apple Books / Kindle",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "TBD",
       "purchased": false,
       "links": [
         {
-          "url": "https://www.nike.com/t/pegasus-40-mens-road-running-shoes",
-          "store": "Nike"
+          "url": "https://www.amazon.com/dp/B07X59RN6N/?coliid=ISJVVERS5AE7T&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-007",
+      "title": "A Philosophy of Software Design, 2nd Edition",
+      "description": "By John Ousterhout - Apple Books / Kindle",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$22",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/dp/173210221X/?coliid=IUIKND4WX77OL&colid=30A9K7BG0C651&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-008",
+      "title": "How Infrastructure Works: Inside the Systems That Shape Our World",
+      "description": "By Deb Chachra - Apple Books / Kindle",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$15",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/dp/B0BV1LSLCH/?coliid=I28U5YZG9UAEVR&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-009",
+      "title": "Hungry Monkey",
+      "description": "By HeidelBAR - Board Game / RPG",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$25",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/dp/B0B2KGZKTW/?coliid=I51P3PO648S31&colid=30A9K7BG0C651&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-010",
+      "title": "Fabulous Modern Cookies: Lessons in Better Baking for Next-Generation Treats",
+      "description": "By Paul Arguin, Chris Taylor - Book",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$25",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/dp/1682686590/?coliid=IKW53X0P6I3M9&colid=30A9K7BG0C651&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-011",
+      "title": "What If? 2: Additional Serious Scientific Answers to Absurd Hypothetical Questions",
+      "description": "By Randal Monroe - Book",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$13",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/dp/B09QYDQQ7N/?coliid=I2INZ1HGFH8OAP&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-012",
+      "title": "Knowledge Graphs: Fundamentals, Techniques, and Applications",
+      "description": "By Mayank Kejriwal, Craig A. Knoblock - Apple Books / Kindle",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$34",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/dp/B08C75T8JF/?coliid=I1RRCHL7CU0538&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-013",
+      "title": "The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World",
+      "description": "By Pedro Domingos - Apple Books / Kindle",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$14",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/dp/B012271YB2/?coliid=IN9H3WUADD7ZR&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-014",
+      "title": "How to Write One Song",
+      "description": "By Jeff Tweedy - Apple Books / Kindle",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$8",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/dp/B08CTG5NPS/?coliid=I3CRCBPUUG9J5K&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-015",
+      "title": "Building Blocks of Tabletop Game Design: An Encyclopedia of Mechanisms",
+      "description": "By Geoffrey Engelstein, Isaac Shalev - Apple Books / Kindle",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$65",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/dp/1032015810/?coliid=I2C06UA5D8W63&colid=30A9K7BG0C651&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-016",
+      "title": "Far Sector",
+      "description": "By NK Jemison - Book",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$20",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/dp/1779512058/?coliid=I3DN7IIND64RTD&colid=30A9K7BG0C651&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-017",
+      "title": "This is Fine Figure",
+      "description": "By Spoke Art - Art",
+      "category": "home",
+      "priority": "medium",
+      "priceRange": "$35",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://spoke-art.com/collections/toys-and-collectibles/products/100-soft-lil-dumpster-fire-this-is-fine-vinyl-figure",
+          "store": "Spoke Art"
+        }
+      ]
+    },
+    {
+      "id": "gift-018",
+      "title": "The Economist Guide to Financial Markets (6th Ed): Why They Exist and How They Work",
+      "description": "By The Economist, Marc Levinson - Apple Books / Kindle",
+      "category": "books",
+      "priority": "high",
+      "priceRange": "$30",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/dp/B00F226E6K/?coliid=I34HF9V5HI4B9P&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-019",
+      "title": "The Origin of Capitalism: A Longer View",
+      "description": "By Ellen Meiksins Wood - Apple Books / Kindle",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$8",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/dp/B01BRFN69S/?coliid=IR1CZGBCM2MAQ&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-020",
+      "title": "Artefact Solo RPG",
+      "description": "By itch.io - Board Game / RPG",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$10",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://mouseholepress.itch.io/artefact",
+          "store": "itch.io"
+        }
+      ]
+    },
+    {
+      "id": "gift-021",
+      "title": "Mothership RPG",
+      "description": "By Tuesday Knight Games - Board Game / RPG",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$60",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.tuesdayknightgames.com/products/mothership-core-set",
+          "store": "Tuesday Knight Games"
+        }
+      ]
+    },
+    {
+      "id": "gift-022",
+      "title": "A Natural History of Empty Lots",
+      "description": "By Christopher Brown - Apple Books / Kindle",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$30",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://a.co/d/cdcKJS2",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-023",
+      "title": "6 Nimmt",
+      "description": "Board Game / RPG",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "TBD",
+      "purchased": false,
+      "links": []
+    },
+    {
+      "id": "gift-024",
+      "title": "Monsters, Aliens, and Holes in the Ground",
+      "description": "By Stu Horvath - Book",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$40",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://a.co/d/7ng9wjp",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-025",
+      "title": "Zelda: Echoes of Wisdom",
+      "description": "By Nintendo - Video Game",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$60",
+      "purchased": false,
+      "links": []
+    },
+    {
+      "id": "gift-026",
+      "title": "The Game Changers",
+      "description": "By Tim Clare - Book",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$23",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://a.co/d/d6f6hNF",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-027",
+      "title": "In the Ashes",
+      "description": "By Devir - Board Game / RPG",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$50",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://a.co/d/iqONInj",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-028",
+      "title": "Picade (Raspberry pi arcade kit)",
+      "description": "By Pimoroni - Game",
+      "category": "tech",
+      "priority": "medium",
+      "priceRange": "$300",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.adafruit.com/product/4334",
+          "store": "Adafruit"
+        }
+      ]
+    },
+    {
+      "id": "gift-029",
+      "title": "Coffee Roaster (game)",
+      "description": "Board Game / RPG",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$41",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://a.co/d/dnf4OtY",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-030",
+      "title": "GiBoard Slackboard",
+      "description": "By GiBoard - Fitness",
+      "category": "fitness",
+      "priority": "medium",
+      "priceRange": "$160",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://a.co/d/4SwBA7e",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-031",
+      "title": "The Quiet Year PDF",
+      "description": "Board Game / RPG",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$10",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://store.buriedwithoutceremony.com/products/the-quiet-year-pdf",
+          "store": "Buried Without Ceremony"
+        }
+      ]
+    },
+    {
+      "id": "gift-032",
+      "title": "Project Ecco PDF",
+      "description": "By Elliot Davis - Board Game / RPG",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$15",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://moreblueberries.itch.io/ecco",
+          "store": "itch.io"
+        }
+      ]
+    },
+    {
+      "id": "gift-033",
+      "title": "Clear Thinking",
+      "description": "By Shane Parrish - Book",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$2",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/gp/product/B0BRMPJ8DR/ref=x_gr_bb_kindle?caller=Goodreads&tag=x_gr_bb_kindle-20&dplnkId=f1a1a102-b461-4452-8fc6-bd76d4d8609b&nodl=1",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-034",
+      "title": "Final Fantasy Tactics: The Ivalice Chronicles (Switch)",
+      "description": "Video Game",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$70",
+      "purchased": false,
+      "links": []
+    },
+    {
+      "id": "gift-035",
+      "title": "Ghost of Yotei (PS5)",
+      "description": "Video Game",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$70",
+      "purchased": false,
+      "links": []
+    },
+    {
+      "id": "gift-036",
+      "title": "Clair Obscur: Expedition 33 (PS5)",
+      "description": "Video Game",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$70",
+      "purchased": false,
+      "links": []
+    },
+    {
+      "id": "gift-037",
+      "title": "How To: Absurd scientific advice for common real world problems",
+      "description": "By Randall Monroe - Book",
+      "category": "books",
+      "priority": "medium",
+      "priceRange": "$15",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.amazon.com/How-Absurd-Scientific-Real-World-Problems/dp/0525537090?tag=theverge02-20&ascsubtag=__vg1111awM__802964__803625________________",
+          "store": "Amazon"
+        }
+      ]
+    },
+    {
+      "id": "gift-038",
+      "title": "Tacklebox",
+      "description": "Board Game / RPG",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$20",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://store.possibleworldsgames.com/product/tacklebox",
+          "store": "Possible Worlds Games"
+        }
+      ]
+    },
+    {
+      "id": "gift-039",
+      "title": "Marvel Cosmic Invasion (Switch 2 Digital)",
+      "description": "Video Game",
+      "category": "games",
+      "priority": "medium",
+      "priceRange": "$30",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://www.nintendo.com/us/store/products/marvel-cosmic-invasion-switch-2/?srsltid=AfmBOoqMr--vphVP39ppmxO03j_TVZ2VGEGCyqroZFNH0W12fiBkY3Uq",
+          "store": "Nintendo"
+        }
+      ]
+    },
+    {
+      "id": "gift-040",
+      "title": "Rocket book Core",
+      "description": "Accessory",
+      "category": "other",
+      "priority": "medium",
+      "priceRange": "$40",
+      "purchased": false,
+      "links": [
+        {
+          "url": "https://a.co/d/0VTqVa4",
+          "store": "Amazon"
         }
       ]
     }
