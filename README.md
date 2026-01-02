@@ -69,7 +69,7 @@ https://<username>.github.io/<repo-name>/
 
 ### Adding Gifts
 
-Edit `data/gifts.json` and add new gift entries:
+Edit `public/data/gifts.json` and add new gift entries:
 
 ```json
 {
@@ -128,7 +128,7 @@ To manually trigger product schema enrichment:
 3. Click **Run workflow**
 
 The workflow also runs automatically:
-- When `data/gifts.json` is updated
+- When `public/data/gifts.json` is updated
 - Weekly on Sundays at 6 AM UTC
 
 ## Project Structure
@@ -141,8 +141,9 @@ wishlist/
 │   └── enrich-links.yml     # Fetch product schema data
 ├── scripts/
 │   └── enrich-links.mjs     # Schema extraction script
-├── data/
-│   └── gifts.json           # Gift data
+├── public/
+│   └── data/
+│       └── gifts.json       # Gift data
 ├── src/
 │   ├── components/
 │   │   ├── PasswordPrompt.tsx

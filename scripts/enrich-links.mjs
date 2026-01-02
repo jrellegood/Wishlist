@@ -105,7 +105,7 @@ function extractProductData(product) {
 async function enrichLinks() {
   try {
     // Read gifts.json
-    const giftsData = JSON.parse(await readFile('data/gifts.json', 'utf-8'));
+    const giftsData = JSON.parse(await readFile('public/data/gifts.json', 'utf-8'));
     let hasChanges = false;
 
     const now = new Date();
@@ -139,7 +139,7 @@ async function enrichLinks() {
     }
 
     if (hasChanges) {
-      await writeFile('data/gifts.json', JSON.stringify(giftsData, null, 2) + '\n');
+      await writeFile('public/data/gifts.json', JSON.stringify(giftsData, null, 2) + '\n');
       console.log('\n✓ gifts.json updated with enriched data');
     } else {
       console.log('\nNo updates needed');
