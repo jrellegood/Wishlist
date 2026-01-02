@@ -1,0 +1,47 @@
+name: Enrich Product Links
+
+on:
+  push:
+    paths:
+      - 'data/gifts.json'
+  schedule:
+    # Run weekly on Sundays at 6 AM UTC
+    - cron: '0 6 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.WISHLIST_PAT }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run enrichment script
+        run: node scripts/enrich-links.mjs
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          if git diff --quiet data/gifts.json; then
+            echo "No changes to commit"
+          else
+            git add data/gifts.json
+            git commit -m "Update product schema data"
+            git push
+          fi
