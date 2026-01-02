@@ -251,7 +251,20 @@
       "links": [
         {
           "url": "https://spoke-art.com/collections/toys-and-collectibles/products/100-soft-lil-dumpster-fire-this-is-fine-vinyl-figure",
-          "store": "Spoke Art"
+          "store": "Spoke Art",
+          "schema": {
+            "@type": "Product",
+            "name": "100% Soft - \"Dumpster Fire - This is Fine\" Vinyl Figure",
+            "image": "https://spoke-art.com/cdn/shop/products/DF-This-Is-Fine-CLEAN-GROUP_2048x_2a033d26-94dc-4589-af7c-9ccce764e030.jpg?v=1634197481&width=1920",
+            "brand": {
+              "name": "100% Soft"
+            },
+            "offers": {
+              "price": "35",
+              "priceCurrency": "USD"
+            }
+          },
+          "schemaFetchedAt": "2026-01-02T19:14:31.692Z"
         }
       ]
     },
@@ -296,7 +309,16 @@
       "links": [
         {
           "url": "https://mouseholepress.itch.io/artefact",
-          "store": "itch.io"
+          "store": "itch.io",
+          "schema": {
+            "@type": "Product",
+            "name": "Artefact",
+            "offers": {
+              "price": "14.00",
+              "priceCurrency": "USD"
+            }
+          },
+          "schemaFetchedAt": "2026-01-02T19:14:31.692Z"
         }
       ]
     },
@@ -311,7 +333,20 @@
       "links": [
         {
           "url": "https://www.tuesdayknightgames.com/products/mothership-core-set",
-          "store": "Tuesday Knight Games"
+          "store": "Tuesday Knight Games",
+          "schema": {
+            "@type": "Product",
+            "name": "Mothership Core Set",
+            "image": "https://www.tuesdayknightgames.com/cdn/shop/files/CoreBoxTD_1024x1024.jpg?v=1714488100",
+            "brand": {
+              "name": "Tuesday Knight Games"
+            },
+            "offers": {
+              "price": "59",
+              "priceCurrency": "USD"
+            }
+          },
+          "schemaFetchedAt": "2026-01-02T19:14:31.692Z"
         }
       ]
     },
@@ -406,7 +441,17 @@
       "links": [
         {
           "url": "https://www.adafruit.com/product/4334",
-          "store": "Adafruit"
+          "store": "Adafruit",
+          "schema": {
+            "@type": "Product",
+            "name": "Pimoroni Picade Cabinet Kit - 10\" Display",
+            "image": "https://cdn-shop.adafruit.com//970x728/4334-09.jpg",
+            "offers": {
+              "price": "299.0000",
+              "priceCurrency": "USD"
+            }
+          },
+          "schemaFetchedAt": "2026-01-02T19:14:31.692Z"
         }
       ]
     },
@@ -451,7 +496,20 @@
       "links": [
         {
           "url": "https://store.buriedwithoutceremony.com/products/the-quiet-year-pdf",
-          "store": "Buried Without Ceremony"
+          "store": "Buried Without Ceremony",
+          "schema": {
+            "@type": "Product",
+            "name": "The Quiet Year PDF",
+            "image": "https://store.buriedwithoutceremony.com/cdn/shop/files/The_Quiet_Year_PDF.png?v=1748123127&width=1920",
+            "brand": {
+              "name": "Buried Without Ceremony"
+            },
+            "offers": {
+              "price": "13.00",
+              "priceCurrency": "CAD"
+            }
+          },
+          "schemaFetchedAt": "2026-01-02T19:14:31.692Z"
         }
       ]
     },
@@ -466,7 +524,16 @@
       "links": [
         {
           "url": "https://moreblueberries.itch.io/ecco",
-          "store": "itch.io"
+          "store": "itch.io",
+          "schema": {
+            "@type": "Product",
+            "name": "Project ECCO",
+            "offers": {
+              "price": "15.00",
+              "priceCurrency": "USD"
+            }
+          },
+          "schemaFetchedAt": "2026-01-02T19:14:31.692Z"
         }
       ]
     },
@@ -541,7 +608,20 @@
       "links": [
         {
           "url": "https://store.possibleworldsgames.com/product/tacklebox",
-          "store": "Possible Worlds Games"
+          "store": "Possible Worlds Games",
+          "schema": {
+            "@type": "Product",
+            "name": "Tacklebox",
+            "image": "https://assets.bigcartel.com/product_images/408664566/Tacklebox_Cover.png?auto=format&fit=max&h=1200&w=1200",
+            "brand": {
+              "name": "Possible Worlds Games"
+            },
+            "offers": {
+              "price": "20.0",
+              "priceCurrency": "USD"
+            }
+          },
+          "schemaFetchedAt": "2026-01-02T19:14:31.692Z"
         }
       ]
     },
