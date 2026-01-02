@@ -632,7 +632,7 @@
       "category": "games",
       "priority": "medium",
       "priceRange": "$30",
-      "purchased": false,
+      "purchased": true,
       "links": [
         {
           "url": "https://www.nintendo.com/us/store/products/marvel-cosmic-invasion-switch-2/?srsltid=AfmBOoqMr--vphVP39ppmxO03j_TVZ2VGEGCyqroZFNH0W12fiBkY3Uq",
