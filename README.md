@@ -198,10 +198,20 @@ VITE_GITHUB_PAT=your-pat-token
 ### Product Enrichment
 
 1. The `enrich-links.mjs` script fetches each product URL
-2. It parses the HTML to find `<script type="application/ld+json">` tags
-3. It extracts Product schema data (name, image, price, brand)
+2. For Amazon URLs:
+   - Uses custom HTML selectors to extract product data (title, price, image, brand/author)
+   - Amazon doesn't provide standard JSON-LD Product schemas, so direct HTML parsing is required
+   - Supports both physical products and Kindle books
+3. For other sites:
+   - Parses the HTML to find `<script type="application/ld+json">` tags
+   - Extracts Product schema data (name, image, price, brand)
 4. The data is saved back to `gifts.json` with a timestamp
 5. Links are only re-fetched if older than 7 days
+
+**Note on Amazon Links**: Amazon actively works to prevent automated scraping. If you experience issues with Amazon product enrichment, consider these alternatives:
+- Use Amazon's official Product Advertising API (requires API key)
+- Use a third-party service like [SerpAPI](https://serpapi.com/) for more reliable Amazon data extraction
+- Manually add product data to your gifts.json for Amazon products
 
 ### Mark as Bought
 
