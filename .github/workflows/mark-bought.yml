@@ -25,19 +25,19 @@ jobs:
           # Use jq to update the purchased status for the specified gift ID
           jq --arg id "${{ github.event.inputs.gift_id }}" \
             '(.gifts[] | select(.id == $id) | .purchased) = true' \
-            data/gifts.json > data/gifts.json.tmp
+            public/data/gifts.json > public/data/gifts.json.tmp
 
-          mv data/gifts.json.tmp data/gifts.json
+          mv public/data/gifts.json.tmp public/data/gifts.json
 
       - name: Commit changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
-          if git diff --quiet data/gifts.json; then
+          if git diff --quiet public/data/gifts.json; then
             echo "No changes to commit"
           else
-            git add data/gifts.json
+            git add public/data/gifts.json
             git commit -m "Mark gift ${{ github.event.inputs.gift_id }} as purchased"
             git push
           fi
