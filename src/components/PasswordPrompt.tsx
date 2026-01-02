@@ -4,20 +4,36 @@ interface PasswordPromptProps {
   onSuccess: () => void;
 }
 
+// SHA-256 hash of the correct password
+const CORRECT_PASSWORD_HASH = 'd4db6bfa5e70dcd78367248f62f46395b8b27a8b5e59e80286bb369cae1094f1';
+
+async function hashPassword(password: string): Promise<string> {
+  const encoder = new TextEncoder();
+  const data = encoder.encode(password);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
 export function PasswordPrompt({ onSuccess }: PasswordPromptProps) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isChecking, setIsChecking] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    if (password === 'familywishes2024') {
+    setIsChecking(true);
+    const hash = await hashPassword(password);
+
+    if (hash === CORRECT_PASSWORD_HASH) {
       setError('');
       onSuccess();
     } else {
       setError('Incorrect password. Please try again.');
       setPassword('');
     }
+    setIsChecking(false);
   };
 
   return (
@@ -55,8 +71,9 @@ export function PasswordPrompt({ onSuccess }: PasswordPromptProps) {
           <button
             type="submit"
             className="btn btn-primary w-full"
+            disabled={isChecking}
           >
-            Access Wishlist
+            {isChecking ? 'Checking...' : 'Access Wishlist'}
           </button>
         </form>
       </div>

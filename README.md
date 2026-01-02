@@ -4,7 +4,7 @@ A password-protected wishlist website hosted on GitHub Pages where family and fr
 
 ## Features
 
-- **Password Protection**: Simple shared password (`familywishes2024`) to control access
+- **Password Protection**: SHA-256 hashed password to control access
 - **Automatic Product Enrichment**: Links are enriched with product data (name, image, price, brand) from schema.org markup
 - **Mark as Bought**: Click a button to mark gifts as purchased via GitHub Actions
 - **Filter & Sort**: Filter by category, sort by priority/category/title, hide purchased items
@@ -105,13 +105,19 @@ When viewing the wishlist:
 
 ### Changing the Password
 
-Edit `src/App.tsx` and change the password constant:
+The password is stored as a SHA-256 hash for basic security. To change it:
 
-```typescript
-if (password === 'your-new-password') {
-```
+1. Generate the SHA-256 hash of your new password:
+   ```bash
+   node -e "const crypto = require('crypto'); console.log(crypto.createHash('sha256').update('YourNewPassword').digest('hex'));"
+   ```
 
-Rebuild and deploy after making changes.
+2. Edit `src/components/PasswordPrompt.tsx` and update the hash constant:
+   ```typescript
+   const CORRECT_PASSWORD_HASH = 'your-new-hash-here';
+   ```
+
+3. Rebuild and deploy after making changes.
 
 ### Manual Enrichment
 
@@ -213,9 +219,10 @@ VITE_GITHUB_PAT=your-pat-token
 
 ## Security Notes
 
-- The password is hardcoded client-side (low security, suitable for family use)
+- Password is hashed using SHA-256 before comparison (basic security layer)
+- The hash is still visible in client-side code (suitable for family use, not high-security applications)
 - PAT is exposed in the built JavaScript (limit permissions to this repo only)
-- For sensitive wishlists, consider additional authentication
+- For sensitive wishlists, consider server-side authentication
 
 ## License
 
