@@ -95,7 +95,20 @@
       "links": [
         {
           "url": "https://www.amazon.com/dp/B088SY4GSD/?coliid=I4Q85WXQAY0ZW&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
-          "store": "Amazon"
+          "store": "Amazon",
+          "schema": {
+            "@type": "Product",
+            "name": "Wool: Book One of the Silo Series",
+            "offers": {
+              "price": "15.49",
+              "priceCurrency": "USD"
+            },
+            "image": "https://m.media-amazon.com/images/I/81P0TuqTpxL._SL1500_.jpg",
+            "brand": {
+              "name": "Hugh Howey     \n       \t\t\t(Author) \n       \t             Format: Kindle Edition"
+            }
+          },
+          "schemaFetchedAt": "2026-01-11T06:25:07.505Z"
         }
       ]
     },
