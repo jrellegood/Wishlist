@@ -222,7 +222,20 @@
       "links": [
         {
           "url": "https://www.amazon.com/dp/B0B2KGZKTW/?coliid=I51P3PO648S31&colid=30A9K7BG0C651&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it",
-          "store": "Amazon"
+          "store": "Amazon",
+          "schema": {
+            "@type": "Product",
+            "name": "Hungry Monkey - Card Game – The Smart & Easy Family Card Game Right Out of The Jungle - for 2 to 6 Players, Age 8+, 15 Min",
+            "offers": {
+              "price": "17.99",
+              "priceCurrency": "USD"
+            },
+            "image": "https://m.media-amazon.com/images/I/81CsmZr+vuL._AC_SL1500_.jpg",
+            "brand": {
+              "name": "Brand: HeidelBÄR Games"
+            }
+          },
+          "schemaFetchedAt": "2026-01-11T06:27:22.520Z"
         }
       ]
     },
@@ -237,7 +250,20 @@
       "links": [
         {
           "url": "https://www.amazon.com/dp/1682686590/?coliid=IKW53X0P6I3M9&colid=30A9K7BG0C651&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it",
-          "store": "Amazon"
+          "store": "Amazon",
+          "schema": {
+            "@type": "Product",
+            "name": "Fabulous Modern Cookies: Lessons in Better Baking for Next-Generation Treats",
+            "offers": {
+              "price": "14.05",
+              "priceCurrency": "USD"
+            },
+            "image": "https://m.media-amazon.com/images/I/81QVKAkguaL._SL1200_.jpg",
+            "brand": {
+              "name": "Paul Arguin     \n       \t\t\t(Author),  \n       \t \n\t            \n\t\t   Chris Taylor     \n       \t\t\t(Author)"
+            }
+          },
+          "schemaFetchedAt": "2026-01-11T06:27:22.520Z"
         }
       ]
     },
@@ -280,7 +306,20 @@
       "links": [
         {
           "url": "https://www.amazon.com/dp/B08C75T8JF/?coliid=I1RRCHL7CU0538&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
-          "store": "Amazon"
+          "store": "Amazon",
+          "schema": {
+            "@type": "Product",
+            "name": "Knowledge Graphs: Fundamentals, Techniques, and Applications (Adaptive Computation and Machine Learning series)",
+            "offers": {
+              "price": "33.99",
+              "priceCurrency": "USD"
+            },
+            "image": "https://m.media-amazon.com/images/I/81j3Pdz6UBL._SL1500_.jpg",
+            "brand": {
+              "name": "Mayank Kejriwal     \n       \t\t\t(Author),  \n       \t \n\t          \n\t\t   Craig A. Knoblock     \n       \t\t\t(Author),  \n       \t \n\t            \n\t\t   Pedro Szekely     \n       \t\t\t(Author) \n       \t \n\t     \n             & \n                 0\n                 more             Format: Kindle Edition"
+            }
+          },
+          "schemaFetchedAt": "2026-01-11T06:27:22.520Z"
         }
       ]
     },
@@ -775,7 +814,7 @@
               "name": "Randall Munroe     \n       \t\t\t(Author)"
             }
           },
-          "schemaFetchedAt": "2026-01-04T06:25:00.205Z"
+          "schemaFetchedAt": "2026-01-11T06:27:22.520Z"
         }
       ]
     },
