@@ -347,7 +347,7 @@
               "name": "Pedro Domingos     \n       \t\t\t(Author) \n       \t             Format: Kindle Edition"
             }
           },
-          "schemaFetchedAt": "2026-01-18T06:26:14.974Z"
+          "schemaFetchedAt": "2026-02-01T06:42:56.492Z"
         }
       ]
     },
@@ -362,7 +362,20 @@
       "links": [
         {
           "url": "https://www.amazon.com/dp/B08CTG5NPS/?coliid=I3CRCBPUUG9J5K&colid=30A9K7BG0C651&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it",
-          "store": "Amazon"
+          "store": "Amazon",
+          "schema": {
+            "@type": "Product",
+            "name": "How to Write One Song",
+            "offers": {
+              "price": "9.99",
+              "priceCurrency": "USD"
+            },
+            "image": "https://m.media-amazon.com/images/I/81mOXgrdwzL._SL1500_.jpg",
+            "brand": {
+              "name": "Jeff Tweedy     \n       \t\t\t(Author) \n       \t             Format: Kindle Edition"
+            }
+          },
+          "schemaFetchedAt": "2026-02-01T06:42:56.492Z"
         }
       ]
     },
