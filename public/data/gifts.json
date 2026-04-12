@@ -423,7 +423,7 @@
             "@type": "Product",
             "name": "Far Sector",
             "offers": {
-              "price": "17.68",
+              "price": "16.78",
               "priceCurrency": "USD"
             },
             "image": "https://m.media-amazon.com/images/I/917Xq2DBKyL._SL1500_.jpg",
@@ -431,7 +431,7 @@
               "name": "N.K. Jemisin     \n       \t\t\t(Author),  \n       \t \n\t            \n\t\t   Jamal Campbell     \n       \t\t\t(Illustrator)"
             }
           },
-          "schemaFetchedAt": "2026-02-22T06:40:34.375Z"
+          "schemaFetchedAt": "2026-04-12T07:10:27.643Z"
         }
       ]
     },
