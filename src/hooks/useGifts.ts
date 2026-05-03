@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import type { Gift, FilterState } from '../types';
+import type { Gift, GiftInput, FilterState } from '../types';
 
 export function useGifts() {
   const [gifts, setGifts] = useState<Gift[]>([]);
@@ -26,7 +26,6 @@ export function useGifts() {
         setLoading(false);
       }
     };
-
     fetchGifts();
   }, []);
 
@@ -36,6 +35,46 @@ export function useGifts() {
         g.id === giftId ? { ...g, purchased: true, purchasedAt: new Date().toISOString() } : g
       )
     );
+  };
+
+  const createGift = async (input: GiftInput, adminCode: string): Promise<void> => {
+    const response = await fetch('/api/admin/gifts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${adminCode}`,
+      },
+      body: JSON.stringify(input),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error ?? 'Failed to create gift');
+    setGifts(prev => [...prev, data.gift]);
+  };
+
+  const updateGift = async (id: string, input: GiftInput, adminCode: string): Promise<void> => {
+    const response = await fetch(`/api/admin/gifts/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${adminCode}`,
+      },
+      body: JSON.stringify(input),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error ?? 'Failed to update gift');
+    setGifts(prev => prev.map(g => (g.id === id ? data.gift : g)));
+  };
+
+  const deleteGift = async (id: string, adminCode: string): Promise<void> => {
+    const response = await fetch(`/api/admin/gifts/${id}`, {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${adminCode}` },
+    });
+    if (!response.ok) {
+      const data = await response.json();
+      throw new Error(data.error ?? 'Failed to delete gift');
+    }
+    setGifts(prev => prev.filter(g => g.id !== id));
   };
 
   const filteredAndSortedGifts = useMemo(() => {
@@ -76,5 +115,8 @@ export function useGifts() {
     filters,
     setFilters,
     markPurchased,
+    createGift,
+    updateGift,
+    deleteGift,
   };
 }

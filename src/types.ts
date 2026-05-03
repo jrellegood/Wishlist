@@ -24,6 +24,22 @@ export interface Gift {
   links: GiftLink[];
 }
 
+export interface GiftLinkInput {
+  id?: number;
+  url: string;
+  store: string;
+}
+
+export interface GiftInput {
+  title: string;
+  description: string;
+  category: Category;
+  priority: Priority;
+  priceRange: string;
+  purchased?: boolean;
+  links: GiftLinkInput[];
+}
+
 export type SortBy = 'priority' | 'category' | 'title';
 
 export interface FilterState {
