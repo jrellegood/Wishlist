@@ -3,7 +3,7 @@ import { FilterBar } from './FilterBar';
 import { useGifts } from '../hooks/useGifts';
 
 export function GiftList() {
-  const { gifts, loading, error, filters, setFilters, refetchGifts } = useGifts();
+  const { gifts, loading, error, filters, setFilters, markPurchased } = useGifts();
 
   if (loading) {
     return (
@@ -30,16 +30,13 @@ export function GiftList() {
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">🎁 Wishlist</h1>
           <p className="text-gray-600">Browse and mark items as purchased</p>
         </div>
 
-        {/* Filters */}
         <FilterBar filters={filters} onFiltersChange={setFilters} />
 
-        {/* Gift Grid */}
         {gifts.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-gray-500 text-lg">No gifts match your filters</p>
@@ -47,7 +44,7 @@ export function GiftList() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {gifts.map((gift) => (
-              <GiftCard key={gift.id} gift={gift} onGiftUpdated={refetchGifts} />
+              <GiftCard key={gift.id} gift={gift} onMarkPurchased={markPurchased} />
             ))}
           </div>
         )}

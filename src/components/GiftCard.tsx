@@ -1,35 +1,52 @@
 import { useState } from 'react';
 import type { Gift } from '../types';
-import { markGiftAsBought } from '../lib/github';
 
 interface GiftCardProps {
   gift: Gift;
-  onGiftUpdated: () => void;
+  onMarkPurchased: (giftId: string) => void;
 }
 
-export function GiftCard({ gift, onGiftUpdated }: GiftCardProps) {
+export function GiftCard({ gift, onMarkPurchased }: GiftCardProps) {
+  const [showCodeInput, setShowCodeInput] = useState(false);
+  const [purchaseCode, setPurchaseCode] = useState('');
   const [isMarking, setIsMarking] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleMarkAsBought = async () => {
-    if (!confirm('Mark this gift as purchased?')) {
-      return;
-    }
+  const handleMarkClick = () => {
+    setShowCodeInput(true);
+    setError(null);
+  };
+
+  const handleSubmitCode = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsMarking(true);
+    setError(null);
 
     try {
-      setIsMarking(true);
-      setError(null);
-      await markGiftAsBought(gift.id);
+      const response = await fetch('/api/mark-purchased', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ giftId: gift.id, purchaseCode }),
+      });
 
-      // Wait a bit for the workflow to complete and data to update
-      setTimeout(() => {
-        onGiftUpdated();
-        setIsMarking(false);
-      }, 3000);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to mark as bought');
+      if (response.ok) {
+        onMarkPurchased(gift.id);
+      } else {
+        const data = await response.json();
+        setError(response.status === 401 ? 'Incorrect code. Try again.' : (data.error ?? 'Something went wrong.'));
+        setPurchaseCode('');
+      }
+    } catch {
+      setError('Network error. Please try again.');
+    } finally {
       setIsMarking(false);
     }
+  };
+
+  const handleCancelCode = () => {
+    setShowCodeInput(false);
+    setPurchaseCode('');
+    setError(null);
   };
 
   const priorityColors = {
@@ -56,45 +73,42 @@ export function GiftCard({ gift, onGiftUpdated }: GiftCardProps) {
     games: 'bg-purple-100 text-purple-800',
     clothing: 'bg-pink-100 text-pink-800',
     books: 'bg-orange-100 text-orange-800',
+    fitness: 'bg-teal-100 text-teal-800',
     other: 'bg-gray-100 text-gray-800',
   };
 
-  // Check if any link has schema data
-  const linkWithSchema = gift.links.find(link => link.schema);
-  const schema = linkWithSchema?.schema;
+  const linkWithOg = gift.links.find(link => link.ogImage || link.ogTitle);
+  const displayTitle = linkWithOg?.ogTitle ?? gift.title;
+  const displayImage = linkWithOg?.ogImage;
+  const displayBrand = linkWithOg?.ogBrand;
+  const displayPrice = linkWithOg?.ogPrice;
 
   return (
     <div className={`card border-l-4 ${priorityColors[gift.priority]} ${gift.purchased ? 'card-purchased' : ''}`}>
-      {/* Product Image (if available from schema) */}
-      {schema?.image && (
+      {displayImage && (
         <div className="w-full h-48 bg-gray-200 overflow-hidden">
           <img
-            src={schema.image}
-            alt={schema.name || gift.title}
+            src={displayImage}
+            alt={displayTitle}
             className="w-full h-full object-cover"
           />
         </div>
       )}
 
       <div className="p-4">
-        {/* Title - use schema name if available */}
         <h3 className={`text-xl font-semibold mb-2 ${gift.purchased ? 'line-through text-gray-500' : 'text-gray-800'}`}>
-          {schema?.name || gift.title}
+          {displayTitle}
         </h3>
 
-        {/* Brand (if available from schema) */}
-        {schema?.brand?.name && (
-          <p className="text-sm text-gray-600 mb-2">
-            Brand: {schema.brand.name}
-          </p>
+        {displayBrand && (
+          <p className="text-sm text-gray-600 mb-2">Brand: {displayBrand}</p>
         )}
 
-        {/* Badges */}
-        <div className="flex gap-2 mb-3">
+        <div className="flex gap-2 mb-3 flex-wrap">
           <span className={`px-2 py-1 text-xs font-medium rounded ${priorityBadgeColors[gift.priority]}`}>
             {priorityLabels[gift.priority]}
           </span>
-          <span className={`px-2 py-1 text-xs font-medium rounded ${categoryColors[gift.category]}`}>
+          <span className={`px-2 py-1 text-xs font-medium rounded ${categoryColors[gift.category] ?? 'bg-gray-100 text-gray-800'}`}>
             {gift.category}
           </span>
           {gift.purchased && (
@@ -104,25 +118,16 @@ export function GiftCard({ gift, onGiftUpdated }: GiftCardProps) {
           )}
         </div>
 
-        {/* Description */}
-        <p className="text-gray-700 mb-3 text-sm">
-          {gift.description}
-        </p>
+        <p className="text-gray-700 mb-3 text-sm">{gift.description}</p>
 
-        {/* Price */}
         <div className="mb-4">
-          {schema?.offers?.price && schema?.offers?.priceCurrency ? (
-            <p className="text-lg font-semibold text-gray-900">
-              {schema.offers.priceCurrency} ${schema.offers.price}
-            </p>
+          {displayPrice ? (
+            <p className="text-lg font-semibold text-gray-900">${displayPrice}</p>
           ) : (
-            <p className="text-sm text-gray-600">
-              Approx: {gift.priceRange}
-            </p>
+            <p className="text-sm text-gray-600">Approx: {gift.priceRange}</p>
           )}
         </div>
 
-        {/* Links */}
         {gift.links.length > 0 && (
           <div className="mb-4">
             <div className="flex flex-wrap gap-2">
@@ -141,18 +146,42 @@ export function GiftCard({ gift, onGiftUpdated }: GiftCardProps) {
           </div>
         )}
 
-        {/* Mark as Bought Button */}
         {!gift.purchased && (
           <div>
-            <button
-              onClick={handleMarkAsBought}
-              disabled={isMarking}
-              className="btn btn-primary w-full"
-            >
-              {isMarking ? 'Marking as bought...' : 'Mark as Bought'}
-            </button>
-            {error && (
-              <p className="text-red-600 text-sm mt-2">{error}</p>
+            {!showCodeInput ? (
+              <button onClick={handleMarkClick} className="btn btn-primary w-full">
+                Mark as Purchased
+              </button>
+            ) : (
+              <form onSubmit={handleSubmitCode} className="space-y-2">
+                <input
+                  type="password"
+                  value={purchaseCode}
+                  onChange={e => setPurchaseCode(e.target.value)}
+                  placeholder="Enter purchase code"
+                  className="input w-full"
+                  autoFocus
+                  disabled={isMarking}
+                />
+                {error && <p className="text-red-600 text-sm">{error}</p>}
+                <div className="flex gap-2">
+                  <button
+                    type="submit"
+                    disabled={isMarking || !purchaseCode}
+                    className="btn btn-primary flex-1"
+                  >
+                    {isMarking ? 'Confirming...' : 'Confirm'}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleCancelCode}
+                    disabled={isMarking}
+                    className="btn btn-secondary"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
             )}
           </div>
         )}

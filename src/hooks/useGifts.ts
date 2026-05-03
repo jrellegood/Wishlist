@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import type { Gift, GiftsData, FilterState } from '../types';
+import type { Gift, FilterState } from '../types';
 
 export function useGifts() {
   const [gifts, setGifts] = useState<Gift[]>([]);
@@ -16,11 +16,9 @@ export function useGifts() {
       try {
         setLoading(true);
         setError(null);
-        const response = await fetch('/Wishlist/data/gifts.json');
-        if (!response.ok) {
-          throw new Error('Failed to fetch gifts');
-        }
-        const data: GiftsData = await response.json();
+        const response = await fetch('/api/gifts');
+        if (!response.ok) throw new Error('Failed to fetch gifts');
+        const data = await response.json();
         setGifts(data.gifts);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An error occurred');
@@ -32,25 +30,27 @@ export function useGifts() {
     fetchGifts();
   }, []);
 
+  const markPurchased = (giftId: string) => {
+    setGifts(prev =>
+      prev.map(g =>
+        g.id === giftId ? { ...g, purchased: true, purchasedAt: new Date().toISOString() } : g
+      )
+    );
+  };
+
   const filteredAndSortedGifts = useMemo(() => {
     let result = [...gifts];
 
-    // Filter by category
     if (filters.category !== 'all') {
       result = result.filter(gift => gift.category === filters.category);
     }
 
-    // Filter out purchased if needed
     if (filters.hidePurchased) {
       result = result.filter(gift => !gift.purchased);
     }
 
-    // Sort
     result.sort((a, b) => {
-      // Always put purchased items at the end
-      if (a.purchased !== b.purchased) {
-        return a.purchased ? 1 : -1;
-      }
+      if (a.purchased !== b.purchased) return a.purchased ? 1 : -1;
 
       switch (filters.sortBy) {
         case 'priority': {
@@ -69,30 +69,12 @@ export function useGifts() {
     return result;
   }, [gifts, filters]);
 
-  const refetchGifts = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-      // Add cache-busting query parameter
-      const response = await fetch(`/Wishlist/data/gifts.json?t=${Date.now()}`);
-      if (!response.ok) {
-        throw new Error('Failed to fetch gifts');
-      }
-      const data: GiftsData = await response.json();
-      setGifts(data.gifts);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return {
     gifts: filteredAndSortedGifts,
     loading,
     error,
     filters,
     setFilters,
-    refetchGifts,
+    markPurchased,
   };
 }

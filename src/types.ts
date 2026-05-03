@@ -1,28 +1,15 @@
-export type Category = 'tech' | 'home' | 'games' | 'clothing' | 'books' | 'other';
+export type Category = 'tech' | 'home' | 'games' | 'clothing' | 'books' | 'fitness' | 'other';
 export type Priority = 'high' | 'medium' | 'low';
 
-export interface SchemaOffer {
-  price: string;
-  priceCurrency: string;
-}
-
-export interface SchemaBrand {
-  name: string;
-}
-
-export interface ProductSchema {
-  '@type': 'Product';
-  name: string;
-  image?: string;
-  brand?: SchemaBrand;
-  offers?: SchemaOffer;
-}
-
 export interface GiftLink {
+  id: number;
   url: string;
   store: string;
-  schema?: ProductSchema;
-  schemaFetchedAt?: string;
+  ogTitle?: string | null;
+  ogImage?: string | null;
+  ogPrice?: string | null;
+  ogBrand?: string | null;
+  enrichedAt?: string | null;
 }
 
 export interface Gift {
@@ -33,11 +20,8 @@ export interface Gift {
   priority: Priority;
   priceRange: string;
   purchased: boolean;
+  purchasedAt: string | null;
   links: GiftLink[];
-}
-
-export interface GiftsData {
-  gifts: Gift[];
 }
 
 export type SortBy = 'priority' | 'category' | 'title';
