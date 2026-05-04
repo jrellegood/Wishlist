@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { verifyAdminCode } from '../../_adminAuth';
-import { supabase } from '../../_db';
+import { verifyAdminCode } from '../../../lib/adminAuth';
+import { supabase } from '../../../lib/db';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'DELETE') {

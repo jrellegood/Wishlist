@@ -1,8 +1,8 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { randomUUID } from 'crypto';
-import { verifyAdminCode } from '../_adminAuth';
-import { supabase, shapeGift, type DbGift } from '../_db';
-import { enrichLink } from '../_enrichUtils';
+import { verifyAdminCode } from '../../lib/adminAuth';
+import { supabase, shapeGift, type DbGift } from '../../lib/db';
+import { enrichLink } from '../../lib/enrichUtils';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
