@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { verifyAdminCode } from '../../../lib/adminAuth';
-import { supabase, shapeGift, type DbGift } from '../../../lib/db';
-import { enrichLink } from '../../../lib/enrichUtils';
+import { verifyAdminCode } from '../../../lib/adminAuth.js';
+import { supabase, shapeGift, type DbGift } from '../../../lib/db.js';
+import { enrichLink } from '../../../lib/enrichUtils.js';
 
 async function handlePut(req: VercelRequest, res: VercelResponse, id: string) {
   const { title, description, category, priority, priceRange, purchased, links = [] } = req.body ?? {};

@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { supabase } from '../lib/db';
-import { enrichLink } from '../lib/enrichUtils';
+import { supabase } from '../lib/db.js';
+import { enrichLink } from '../lib/enrichUtils.js';
 
 function isAuthorized(req: VercelRequest): boolean {
   if (req.headers['x-vercel-cron'] === '1') return true;
