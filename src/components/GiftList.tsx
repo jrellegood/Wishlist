@@ -69,7 +69,7 @@ export function GiftList() {
         <div className="mb-8">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <h1 className="text-4xl font-bold text-gray-900 mb-2">🎁 Wishlist</h1>
+              <h1 className="text-4xl font-bold text-gray-900 mb-2">Joe's Wishlist</h1>
               <p className="text-gray-600">Browse and mark items as purchased</p>
             </div>
 
